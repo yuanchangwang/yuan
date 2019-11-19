@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4" style="margin-top: 70px">
+            <h2 class="text-center">用户登录</h2>
+
+            <form autocomplete="off" action="/login/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
+                    <span class="help-block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+                    <span class="help-block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="code">验证码</label>
+                    <div class="form-inline">
+                        <input type="text" class="form-control" id="code" placeholder="请输入验证码" name="v_code">
+                        <img src="{% url 'code' %}" alt="" id="i_code">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span>没有账户？</span>
+                    <a href="/register/">注册</a>
+                </div>
+                <button type="submit" id="login-btn" class="btn btn-success btn-block">登录</button>
+                <span id="msg" class="text-danger">{{ error_msg }}</span>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+
+<script>
+    $('#username, #password, #code').focus(function () {
+       $('#msg').addClass('hide');
+       {#$('#msg').text('');#}
+    });
+    $('#i_code').click(function () {
+        $(this).prop('src', '/v_code/?pk=' + Math.random());  // 方式一
+        {#$(this)[0].src += '?';  // 方式二#}
+    })
+</script>
+
+</body>
+</html>

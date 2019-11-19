@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.main .thead{
+    height: 50px;
+    background-color: rgb(247,247,247);
+    line-height: 50px;
+    color: rgb(102,102,102);
+    font-size: 20px;
+    border-bottom: 1px solid red;
+}
+
+.thead .left li{
+    float: left;
+    list-style-type: none;   /*去掉li标签的小圆点*/
+    padding: 0 30px;
+}
+
+.thead .left .selected{
+    background-color: red;
+    color: white;
+}
+
+.thead .right{
+    float: right;
+    width: 120px;
+    height: 35px;
+    background-color: red;
+    margin: 10px 10px 5px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+}
+
+.thead .right a{
+    text-decoration: none;
+    color: white;
+}
+
+.tbody .hide{
+    display: none;
+}
+
+.thead .right .cart{
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    border: 1px gray solid;
+}
+
+/*鼠标悬浮的时候触发：hover，给.cart添加属性*/
+.thead .right:hover .cart{
+    display: block;
+}
+
+

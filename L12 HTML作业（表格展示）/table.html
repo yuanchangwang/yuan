@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格显示</title>
+
+    <style>
+
+        #t1 td {
+            border: 1px solid red;
+        }
+
+        #t2 th,td {
+            border: 1px solid blue;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<table id="t1" style="border: 1px solid red; border-collapse: collapse">
+<!--tab键，会自动补全-->
+
+    <tbody>
+        <!--tr*4>td*3 + tab键快速补全-->
+        <tr>
+            <td rowspan="2">素菜</td>
+            <td>青草茄子</td>
+            <td>花椒扁豆</td>
+        </tr>
+        <tr>
+            <td>小葱豆腐</td>
+            <td>炒白菜</td>
+        </tr>
+        <tr>
+            <!-- 按住 alt 键可以快速复制多行-->
+            <td rowspan="2">荤菜</td>
+            <td>油焖大虾</td>
+            <td>海参鱼翅</td>
+        </tr>
+        <tr>
+            <td>红烧肉 <img src="hongshaorou.png" alt=""></td>
+            <td>烤全羊</td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <!--<th>星期一菜谱</th>  th相当于td加粗-->
+            <td colspan="3" style="text-align: center">星期一菜谱</td>
+        </tr>
+    </thead>
+
+</table>
+
+
+<hr>
+
+<!--<p>课程表</p>-->
+
+<table id="t2" style="border: 1px solid blue;">
+    <caption>课程表</caption>
+    <tr>
+        <th>项目</th>
+        <th colspan="5">上课</th>
+        <th colspan="2">休息</th>
+    </tr>
+
+    <tr>
+        <th>星期</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+        <th>星期六</th>
+        <th>星期日</th>
+    </tr>
+
+    <tr>
+        <td rowspan="4">上午</td>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+        <td rowspan="4" align="center">休息</td>
+    </tr>
+    <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+    </tr>
+    <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+    </tr>
+    <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+    </tr>
+    <tr>
+        <td rowspan="2">下午</td>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+        <td rowspan="2" style="text-align: center">休息</td>
+    </tr>
+    <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>计算机</td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

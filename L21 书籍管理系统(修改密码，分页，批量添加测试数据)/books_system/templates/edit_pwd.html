@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    <li class="active"><a href="/books/book_list/">图书管理</a></li>
+    <li><a href="#">出版社管理</a></li>
+    <li><a href="#">作者管理</a></li>
+{% endblock nav %}
+
+{% block content %}
+
+    <h2 class="sub-header text-center">修改密码</h2>
+
+    <form autocomplete="off" class="form-horizontal" action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="old_password" class="col-sm-2 control-label">请输入旧密码</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="old_password" name="old_password" placeholder="请输入旧密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="new_password" class="col-sm-2 control-label">请输入新密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="new_password" name="new_password" placeholder="请输入新密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="re_password" class="col-sm-2 control-label">请确认新密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="re_password" name="re_password" placeholder="请确认新密码">
+                <span id="msg" class="text-danger">{{ msg }}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">保存</button>
+                <a href="/books/book_list/">
+                    <button type="button" class="btn btn-default">取消</button>
+                </a>
+            </div>
+        </div>
+    </form>
+{% endblock content %}
+
+{% block js %}
+    <script>
+        $('input').focus(function () {
+            $('#msg').text('')
+        })
+    </script>
+{% endblock %}

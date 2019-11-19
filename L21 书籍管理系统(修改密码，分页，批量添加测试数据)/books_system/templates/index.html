@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    <li class="active"><a href="/books/book_list/">图书管理 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">出版社管理</a></li>
+    <li><a href="#">作者管理</a></li>
+{% endblock nav %}
+
+{% block content %}
+
+    <h2 class="sub-header text-center">书籍列表</h2>
+    <div class="table-responsive">
+{#        {{ block.super }}#}
+        <a href="#">
+            <button class="btn btn-success" style="margin-bottom: 10px">新增书籍</button>
+        </a>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>书名</th>
+                <th>价格</th>
+                <th>作者</th>
+                <th>出版社</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for books in books_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ books.title }}</td>
+                    <td>{{ books.price }}</td>
+                    <td>{{ books.author }}</td>
+                    <td>{{ books.publisher }}</td>
+                    <td>
+                        <a href="#">
+                            <button type="button" class="btn btn-info edit">编辑</button>
+                        </a>
+                        <a href="#">
+                            <button type="button" class="btn btn-danger del">删除</button>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

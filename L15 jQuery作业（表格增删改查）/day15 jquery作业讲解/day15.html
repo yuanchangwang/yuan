@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+    <style>
+        body {
+            padding-top: 30px;
+        }
+
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!--面板-->
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading text-center">
+            <h2>员工管理系统</h2>
+        </div>
+        <div class="panel-body">
+            <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">添加</button>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>部门</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>杨</td>
+                <td>18</td>
+                <td>教学部</td>
+                <td>
+                    <button type="button" class="btn btn-info btn-sm edit">编辑</button>
+                    <button type="button" class="btn btn-danger btn-sm del">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>杨1</td>
+                <td>18</td>
+                <td>教学部</td>
+                <td>
+                    <button type="button" class="btn btn-info btn-sm edit">编辑</button>
+                    <button type="button" class="btn btn-danger btn-sm del">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>杨2</td>
+                <td>18</td>
+                <td>教学部</td>
+                <td>
+                    <button type="button" class="btn btn-info btn-sm edit">编辑</button>
+                    <button type="button" class="btn btn-danger btn-sm del">删除</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--模态框-->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title text-center"></h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age" class="col-sm-2 control-label">年龄</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="age">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="department" class="col-sm-2 control-label">部门</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="department">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="save" type="button" class="btn btn-primary">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>
+
+
+<script src="jquery-3.4.1.js"></script>
+<script src="bootstrap-3.3.7/js/bootstrap.js"></script>
+<script src="day15.js"></script>
+
+</body>
+</html>

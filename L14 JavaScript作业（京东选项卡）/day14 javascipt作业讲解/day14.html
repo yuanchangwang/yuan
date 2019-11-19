@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="day14.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="thead">
+        <div class="left">
+            <ul>
+                <li class="list selected">商品介绍</li>
+                <li class="list">规格与包装</li>
+                <li class="list">售后保障</li>
+                <li class="list">商品评价(3100+)</li>
+                <li class="list">预约说明</li>
+            </ul>
+        </div>
+        <div class="right">
+            <a href="">立即抢购</a>
+            <div class="cart">
+                <img src="img/6.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="tbody">
+        <div class="item">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="item hide">
+            <img src="img/2.png" alt="">
+        </div>
+        <div class="item hide">
+            <img src="img/3.png" alt="">
+        </div>
+        <div class="item hide">
+            <img src="img/4.png" alt="">
+        </div>
+        <div class="item hide">
+            <img src="img/5.png" alt="">
+        </div>
+    </div>
+</div>
+
+<script>
+    var lists = document.getElementsByClassName('list');
+    console.log(lists);
+    var items = document.getElementsByClassName('item');
+    console.log(items);
+
+    for (var i = 0; i < lists.length; i++) {
+        lists[i].onclick = function () {
+            for (var j = 0; j < items.length; j++) {
+                items[j].classList.remove('hide');
+                lists[j].classList.add('selected');
+                if(lists[j] !== this){
+                    items[j].classList.add('hide');
+                    lists[j].classList.remove('selected');
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

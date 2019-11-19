@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width: 1366px) {
+    .row{
+        width: 1250px;
+    }
+    .main{
+        width: 1250px;
+    }
+    .logo{
+        margin-left: 50px;
+    }
+}
+
+@media(min-width: 1367px) {
+    .row{
+        width: 1500px;
+    }
+    .main{
+        width: 1500px;
+    }
+    .logo{
+        margin-left: 150px;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-color: rgb(245,245,245);
+    color: #b0b0b0;
+    height: 30px;
+}
+
+.row{
+    line-height: 30px;
+    margin: 0 auto;
+    /*width: 1500px;*/
+}
+
+.row .header_left{
+    float: left;
+}
+
+.row .header_right{
+    float: right;
+}
+
+.row .header_right a{
+    margin-left: 20px;
+    color: #b0b0b0;
+}
+
+.logo{
+    /*margin-left: 150px;*/
+}
+
+.main{
+    height: 600px;
+    /*width: 1500px;*/
+    border: 1px solid gray;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main .main_left{
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.main .new_user{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.item{
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.item span{
+    color: red;
+}
+
+.item label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    font-size: 24px;
+}
+
+.item input{
+    height: 40px;
+    width: 340px;
+}
+
+.item .icon{
+    display: inline-block;
+    position: relative;
+    height: 40px;
+}
+
+.item .icon img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    line-height: 40px;
+}
+
+#auth{
+    width: 150px;
+}
+
+#yzm{
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 27px;
+}
+
+.item1{
+    font-size: 22px;
+    margin-left: 150px;
+    line-height: 60px;
+}
+
+#protocol{
+    color: blue;
+}
+
+.register{
+    margin-left: 150px;
+    width: 345px;
+    height: 50px;
+    background-color: red;
+    border: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.main .main_right{
+    float: right;
+    width: 400px;
+    height: 500px;
+    border-left: 1px gray dashed;
+    margin-top: 50px;
+}
+
+.main .main_right .login{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.main .main_right a{
+    color: blue;
+}
+
+.main .main_right img{
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.footer{
+    color: #b0b0b0;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
